@@ -49,7 +49,7 @@ class AppKernel extends Kernel
 Step 3: Configure dependencies of the Bundle
 ------------------------------------------------
 
-```
+```yaml
 # app/config/config.yml
 
 knp_gaufrette:
@@ -107,7 +107,7 @@ stof_doctrine_extensions:
 Step 4: Import API router
 -------------------------
 
-```
+```yaml
 # app/config/routing.yml
 
 melodia_file_api_:
