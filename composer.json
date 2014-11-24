@@ -3,7 +3,7 @@
     "description": "A very simple bundle to handle file uploading",
     "license": "MIT",
     "keywords": ["file", "upload"],
-    "homepage": "http://github.com/Melodia/MelodiaFileBundle",
+    "homepage": "http://github.com/melodia/MelodiaFileBundle",
     "authors": [
         {
             "name": "Alexey Ryzhkov",
