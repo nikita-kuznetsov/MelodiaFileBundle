@@ -46,10 +46,12 @@ class AppKernel extends Kernel
 }
 ```
 
-Step 3: Configure the Bundle and its dependencies
+Step 3: Configure dependencies of the Bundle
 ------------------------------------------------
 
 ```
+# app/config/config.yml
+
 knp_gaufrette:
     stream_wrapper: ~
     adapters:
@@ -75,6 +77,8 @@ Step 4: Import API router
 -------------------------
 
 ```
+# app/config/routing.yml
+
 melodia_file_api_:
     resource: "@MelodiaFileBundle/Resources/config/routing/api.yml"
     prefix: /api
