@@ -1,0 +1,24 @@
+{
+    "name": "melodia/file-bundle",
+    "description": "A very simple bundle to handle file uploading",
+    "license": "MIT",
+    "keywords": ["file", "upload"],
+    "homepage": "http://github.com/Melodia/MelodiaFileBundle",
+    "authors": [
+        {
+            "name": "Alexey Ryzhkov",
+            "email": "alioch@yandex.ru"
+        }
+    ],
+    "require": {
+        "vich/uploader-bundle":         "~0.11",
+        "knplabs/knp-gaufrette-bundle": "0.1.*"
+    },
+    "autoload": {
+        "psr-0": {
+            "Melodia\\FileBundle": ""
+        }
+    },
+    "target-dir": "Melodia/FileBundle"
+}
+

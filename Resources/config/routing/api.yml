@@ -1,0 +1,3 @@
+melodia_file_api:
+    type:     rest
+    resource: Melodia\FileBundle\Controller\Api\FileController
