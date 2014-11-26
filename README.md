@@ -1,6 +1,6 @@
 #MelodiaFileBundle
 
-##Installatioin
+##Installation
 
 Step 1: Download the Bundle
 ---------------------------
@@ -10,7 +10,7 @@ Step 1: Download the Bundle
 repositories: [
   {
     "type": "vcs",
-    "url": "https://github.com/Melodia/MelodiaFileBundle.git"
+    "url": "https://github.com/melodia/MelodiaFileBundle.git"
   }
 ]
 ```
