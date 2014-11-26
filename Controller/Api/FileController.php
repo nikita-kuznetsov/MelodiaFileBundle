@@ -45,9 +45,12 @@ class FileController extends RestController
 
         $files = $this->getDoctrine()->getRepository(File::REPOSITORY)
             ->findSubset($page, $limit);
-        $files = $this->get('jms_serializer')->serialize($files, 'json',
-            SerializationContext::create()->setGroups(array("getAllFiles"))
-        );
+
+        $context = new SerializationContext();
+        $context->setGroups(array("getAllFiles"));
+        $context->setSerializeNull(true);
+
+        $files = $this->get('jms_serializer')->serialize($files, 'json', $context);
 
         return new Response($files, 200);
     }
@@ -74,9 +77,11 @@ class FileController extends RestController
             return new JsonResponse(null, 404);
         }
 
-        $file = $this->get('jms_serializer')->serialize($file, 'json',
-            SerializationContext::create()->setGroups(array("getOneFile"))
-        );
+        $context = new SerializationContext();
+        $context->setGroups(array("getOneFile"));
+        $context->setSerializeNull(true);
+
+        $file = $this->get('jms_serializer')->serialize($file, 'json', $context);
 
         return new Response($file, 200);
     }
@@ -107,9 +112,11 @@ class FileController extends RestController
         $entityManager->persist($file);
         $entityManager->flush();
 
-        $file = $this->get('jms_serializer')->serialize($file, 'json',
-            SerializationContext::create()->setGroups(array("postFile"))
-        );
+        $context = new SerializationContext();
+        $context->setGroups(array("postFile"));
+        $context->setSerializeNull(true);
+
+        $file = $this->get('jms_serializer')->serialize($file, 'json', $context);
 
         return new Response($file, 201);
     }
