@@ -5,10 +5,10 @@ parameters:
 services:
     melodia_file.directory_namer:
         class: %melodia_file.directory_namer.class%
-        arguments: [@service_container]
+        arguments: ['@service_container']
 
     melodia_file.file_saving.listener:
         class: %melodia_file.file_saving.listener.class%
-        arguments: [@service_container]
+        arguments: ['@service_container']
         tags:
             - { name: doctrine.event_listener, event: postPersist }
